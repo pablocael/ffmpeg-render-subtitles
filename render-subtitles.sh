@@ -16,5 +16,5 @@ if ! [ -x "$(command -v ffmpeg)" ]; then
 else
     echo "ffmpeg is already installed, rendering subtitles ..."
     echo "video file = $VIDEO_FILE using font size $FONT_SIZE and font file '$SUBTITLE_FILE'"
-    ffmpeg -i $VIDEO_FILE -vf "subtitles=$SUBTITLE_FILE:force_style='Fontsize=$FONT_SIZE,PrimaryColour=&H0000ff&'" -c:a copy output.mp4
+    ffmpeg -i $VIDEO_FILE -vf "subtitles=$SUBTITLE_FILE:force_style='Fontsize=$FONT_SIZE,PrimaryColour=&Hffffff&'" -c:a copy output.mp4
 fi
